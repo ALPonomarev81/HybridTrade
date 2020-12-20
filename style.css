@@ -28,6 +28,7 @@ html {
 }
 .video{
     padding-bottom: 56.25%;
+    background-attachment: fixed;
 }
 .startPage video{
     position: absolute;
