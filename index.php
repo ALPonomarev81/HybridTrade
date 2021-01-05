@@ -6,7 +6,7 @@
     <title>Hybrid Trade</title>
     <link href="style.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">-->
 </head>
 
 <?php
@@ -16,34 +16,38 @@
 ?>
 
 <main>
-    <header>
-        <div class="headerBar">
-            <p class="tel"><i class="fas fa-mobile-alt"></i>   +7 925 925 25 85</p>
-            <ul class="menu">
-                <li>Оставить заявку</li>
-                <li>Расчитать стоимость</li>
-            </ul>
-        </div>
-    </header>
+    <header></header> 
     <body>
         <section class="startPage">
             <div class="video">
                 <video src="video\Hybrid.mp4" autoplay loop muted></video>
             </div>
+            <div class="headerBar">
+            <ul class="menu">
+                <li>Оставить заявку</li>
+                <li>Расчитать стоимость</li>
+            </ul>
+            <p class="tel"><i class="fas fa-mobile-alt"></i>   +7 925 925 25 85</p>
+            </div>
             <div class="mainBlock">
                 <H1>Hybrid Trade</H1>
                 <p class="mainText">Мы осуществляем помощь в покупке и привозе праворульных Гибридных автомобилей или Электромобилей жителям Новосибирска и Сибири.</p>
+               
             </div>
             <div class="Brands">
                 <?php 
                 for ($i=0;$i<$rows;$i++){
                     $brand=mysqli_fetch_assoc($query);?>
                         <div class="brand">
-                            <img src="<?php echo $brand['Logo']?>" alt="<?php echo $brand['Brand']?>">
+                            <img class="brandImg" src="<?php echo $brand['Logo']?>" alt="<?php echo $brand['Brand']?>">
                         </div>
                     <?php }	?>
-            </div>
+                 </div>
+
+            
         </section>
+        
+
     </body>
 </main>
 </html>
